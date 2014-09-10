@@ -1,21 +1,16 @@
 'use strict';
 
 var meanMedianMode = function(){
-  this.report = {
-    mean: '',
-    median: '',
-    mode: ''
-  };
+  this.report = {};
 };
 
 module.exports = meanMedianMode;
 
 meanMedianMode.prototype.go = function(series){
   var v = this.getNumericValues(series);
-  this.modeOf(v);
-  this.meanOf(v);
-  this.medianOf(v);
-  return this.report;
+  this.report.mode = this.modeOf(v);
+  this.report.mean = this.meanOf(v);
+  this.report.median = this.medianOf(v);
 };
 
 // mode
@@ -42,7 +37,7 @@ meanMedianMode.prototype.modeOf = function(v){
     }
   }
 
-  this.report.mode = (modes.length > 1) ? modes : modes[0];
+  return (modes.length > 1) ? modes : modes[0];
 };
 
 // mean
@@ -50,7 +45,7 @@ meanMedianMode.prototype.meanOf = function(v){
   var sum = v.reduce(function(prev, curr, index, arr){
     return prev + curr;
   });
-  this.report.mean = sum / v.length;
+  return sum / v.length;
 };
 
 // median
@@ -58,10 +53,10 @@ meanMedianMode.prototype.medianOf = function(values){
   var length = values.length;
   if( length % 2 === 0){
     // take an average of the two median values
-    this.report.median = (values[length/2 - 1] + values[length/2]) / 2;
+    return (values[length/2 - 1] + values[length/2]) / 2;
   }else{
     // get the median value
-    this.report.median = values[ Math.ceil(length / 2) ];
+    return values[ Math.ceil(length / 2) ];
   }
 };
 

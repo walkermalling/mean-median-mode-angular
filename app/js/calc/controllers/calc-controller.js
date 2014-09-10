@@ -6,7 +6,8 @@ module.exports = function(app) {
   app.controller('calcController', function($scope) {
     $scope.getMMM = function(input) {
       var mmm = new meanMedianMode();
-      $scope.report = mmm.go(input);
+      mmm.go(input);
+      $scope.report = mmm.report;
     };
   });
 };
