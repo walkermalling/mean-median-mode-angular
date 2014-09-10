@@ -1,5 +1,8 @@
 node_modules/
 bower_components/
+db/
+build/
+npm-debug.log
 .DS_Store
 *.sublime-project
 *.sublime-workspace

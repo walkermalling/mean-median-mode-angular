@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mean Median Mode</title>
+</head>
+<body>
+  <h1>Mean Median Mode</h1>
+  <div data-ng-app="mmmApp">
+    <div data-ng-controller="calcController">
+      <h3>Enter a series of values:</h3>
+      <input type="text" value="30, 12, 10, 4, 3, 1, 20, 18" data-ng-model="series">
+      <button data-ng-click="getMMM(series)">Enter</button>
+      <div>
+  
+        <table>
+          <tr>
+            <td>mean</td>
+            <td>median</td>
+            <td>mode</td>
+          </tr>
+          <tr>
+            <td>{{ report.mean }}</td>
+            <td>{{ report.median }}</td>
+            <td>{{ report.mode }}</td>
+          </tr>
+        </table>
+        
+      </div>
+    </div>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+</html>

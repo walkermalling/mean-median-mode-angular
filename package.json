@@ -1,0 +1,37 @@
+{
+  "name": "mean-median-mode-angular",
+  "version": "0.0.1",
+  "description": "mmm solution with angular",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/walkermalling/mean-median-mode-angular.git"
+  },
+  "author": "Walker Malling",
+  "license": "MIT",
+  "homepage": "https://github.com/walkermalling/mean-median-mode-angular",
+  "dependencies": {
+    "angular-route": "^1.2.17-build.163.1",
+    "body-parser": "^1.6.3",
+    "express": "^4.7.4"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "chai-http": "^0.4.0",
+    "debowerify": "^0.8.1",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^2.1.4",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-express-server": "^0.4.19",
+    "grunt-karma": "^0.9.0",
+    "grunt-mocha": "^0.4.11",
+    "grunt-simple-mocha": "^0.4.0",
+    "karma": "^0.12.23",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-jasmine": "^0.1.5",
+    "karma-mocha": "^0.1.8",
+    "mocha": "^1.21.4"
+  }
+}
